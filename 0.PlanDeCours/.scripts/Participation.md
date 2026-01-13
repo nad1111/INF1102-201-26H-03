@@ -18,7 +18,7 @@
 |------|----------------------------|--------------|--------|
 | 0 | [300133071](../300133071/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 1 | [300137754](../300137754/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
-| 2 | [300138205](../300138205/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 2 | [300138205](../300138205/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 3 | [300138573](../300138573/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 4 | [300141429](../300141429/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 5 | [300141625](../300141625/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
