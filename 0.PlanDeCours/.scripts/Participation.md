@@ -1,4 +1,4 @@
-# Participation au 13-01-2026 23:24
+# Participation au 13-01-2026 23:27
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -18,9 +18,9 @@
 |------|----------------------------|--------------|--------|
 | 0 | [300133071](../300133071/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 1 | [300137754](../300137754/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
-| 2 | [300138205](../300138205/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
+| 2 | [300138205](../300138205/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 3 | [300138573](../300138573/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| 4 | [300141429](../300141429/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
+| 4 | [300141429](../300141429/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 5 | [300141625](../300141625/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 6 | [300141657](../300141657/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 7 | [300141716](../300141716/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
@@ -40,6 +40,6 @@
 | 21 | [300150485](../300150485/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 22 | [300150558](../300150558/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 23 | [300151042](../300151042/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| 24 | [300151354](../300151354/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 24 | [300151354](../300151354/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 25 | [300151607](../300151607/README.md) :point_right: [](https://github.com/) <image src='https://avatars0.githubusercontent.com/u/583231?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| :abacus: | \$\\frac{5}{26}\$ = 19.23% | \$\displaystyle\sum_{i=1}^{26} s_i\$ = 5 |
+| :abacus: | \$\\frac{7}{26}\$ = 26.92% | \$\displaystyle\sum_{i=1}^{26} s_i\$ = 7 |
