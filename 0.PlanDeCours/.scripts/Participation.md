@@ -1,4 +1,4 @@
-# Participation au 20-01-2026 22:37
+# Participation au 20-01-2026 22:41
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -34,7 +34,7 @@
 | 15 | [300146721](../300146721/README.md) :point_right: [smailikh](https://github.com/smailikh) <image src='https://avatars0.githubusercontent.com/u/222739217?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 16 | [300147629](../300147629/README.md) :point_right: [zoumarbalde-blip](https://github.com/zoumarbalde-blip) <image src='https://avatars0.githubusercontent.com/u/231347782?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 17 | [300147816](../300147816/README.md) :point_right: [HananeZerrouki](https://github.com/HananeZerrouki) <image src='https://avatars0.githubusercontent.com/u/230452383?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
-| 18 | [300150195](../300150195/README.md) :point_right: [amelzourane](https://github.com/amelzourane) <image src='https://avatars0.githubusercontent.com/u/211596474?s=460&v=4' width=20 height=20></image> | :x: | :x: |
+| 18 | [300150195](../300150195/README.md) :point_right: [amelzourane](https://github.com/amelzourane) <image src='https://avatars0.githubusercontent.com/u/211596474?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 19 | [300150385](../300150385/README.md) :point_right: [belka1996](https://github.com/belka1996) <image src='https://avatars0.githubusercontent.com/u/205994785?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 20 | [300150416](../300150416/README.md) :point_right: [hachemsouyadi](https://github.com/hachemsouyadi) <image src='https://avatars0.githubusercontent.com/u/211596263?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: |
 | 21 | [300150433](../300150433/README.md) :point_right: [zakariadjellouli](https://github.com/zakariadjellouli) <image src='https://avatars0.githubusercontent.com/u/211743410?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
@@ -44,4 +44,4 @@
 | 25 | [300151354](../300151354/README.md) :point_right: [massinissamakoudi](https://github.com/massinissamakoudi) <image src='https://avatars0.githubusercontent.com/u/212047331?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :heavy_check_mark: |
 | 26 | [300151607](../300151607/README.md) :point_right: [oussama-rgb-art](https://github.com/oussama-rgb-art) <image src='https://avatars0.githubusercontent.com/u/205996126?s=460&v=4' width=20 height=20></image> | :x: | :x: |
 | 27 | [300151970](../300151970/README.md) :point_right: [adissa29](https://github.com/adissa29) <image src='https://avatars0.githubusercontent.com/u/212268227?s=460&v=4' width=20 height=20></image> | :x: | :x: |
-| :abacus: | \$\\frac{16}{28}\$ = 57.14% | \$\displaystyle\sum_{i=1}^{28} s_i\$ = 16 |
+| :abacus: | \$\\frac{17}{28}\$ = 60.71% | \$\displaystyle\sum_{i=1}^{28} s_i\$ = 17 |
