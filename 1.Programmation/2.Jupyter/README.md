@@ -2,6 +2,8 @@
 
 [:tada: Participation](.scripts/Participation.md)
 
+---
+
 Installer **Jupyter** (Notebook ou Lab) sous **Windows PowerShell**, en utilisant **Chocolatey**.
 
 Installer **Miniforge** via **Chocolatey** sur Windows, voici la procédure complète :
