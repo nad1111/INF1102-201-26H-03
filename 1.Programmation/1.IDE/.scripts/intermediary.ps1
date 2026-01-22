@@ -25,8 +25,8 @@ Write-Output "| :x:                | Projet inexistant             |"
 Write-Output ""
 Write-Output "## :a: Présence"
 Write-Output ""
-Write-Output "|:hash:| Boréal :id:                | README.md    | images |"
-Write-Output "|------|----------------------------|--------------|--------|"
+Write-Output "|:hash:| Boréal :id:                | :id:.md    |"
+Write-Output "|------|----------------------------|------------|"
 
 # Initialize counters
 $i = 0
@@ -40,23 +40,15 @@ foreach ($entry in $STUDENTS) {
     $AvatarID  = $parts[2]
 
     $URL = "[{0}](https://github.com/{0}) <image src='https://avatars0.githubusercontent.com/u/{1}?s=460&v=4' width=20 height=20></image>" -f $GitHubID, $AvatarID
-    $FILE = "$StudentID/README.md"
-    $FOLDER = "$StudentID/images"
+    $FILE = "$StudentID.md"
 
-    $OK = "| $i | [$StudentID](../$FILE) :point_right: $URL | :heavy_check_mark: | :x: |"
-    $FULL_OK = "| $i | [$StudentID](../$FILE) :point_right: $URL | :heavy_check_mark: | :heavy_check_mark: |"
-    $KO = "| $i | [$StudentID](../$FILE) :point_right: $URL | :x: | :x: |"
+    $OK = "| $i | [$StudentID](../$FILE) :point_right: $URL | :heavy_check_mark: |"
+    $KO = "| $i | [$StudentID](../$FILE) :point_right: $URL | :x: |"
 
     if (Test-Path $FILE) {
         $ACTUAL_NAME = Split-Path -Leaf (Resolve-Path $FILE)
         if ($ACTUAL_NAME -eq "README.md") {
-            if (Test-Path $FOLDER -PathType Container) {
-                Write-Output $FULL_OK
-                $s++
-            }
-            else {
                 Write-Output $OK
-            }
         }
         else {
             Write-Output $KO
