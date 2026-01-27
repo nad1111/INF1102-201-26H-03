@@ -1,4 +1,4 @@
-# Participation au 27-01-2026 05:03
+# Participation au 27-01-2026 08:58
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -44,4 +44,4 @@
 | 25 | [300151354](../300151354.md) :point_right: [massinissamakoudi](https://github.com/massinissamakoudi) <image src='https://avatars0.githubusercontent.com/u/212047331?s=460&v=4' width=20 height=20></image> | :x: |
 | 26 | [300151607](../300151607.md) :point_right: [oussama-rgb-art](https://github.com/oussama-rgb-art) <image src='https://avatars0.githubusercontent.com/u/205996126?s=460&v=4' width=20 height=20></image> | :x: |
 | 27 | [300151970](../300151970.md) :point_right: [adissa29](https://github.com/adissa29) <image src='https://avatars0.githubusercontent.com/u/212268227?s=460&v=4' width=20 height=20></image> | :x: |
-| :abacus: | \$\\frac{0}{28}\$ = 0% | \$\displaystyle\sum_{i=1}^{28} s_i\$ = 0 |
+| :abacus: | \$\\frac{8}{28}\$ = 28.57% | \$\displaystyle\sum_{i=1}^{28} s_i\$ = 8 |

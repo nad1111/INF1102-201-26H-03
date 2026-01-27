@@ -49,6 +49,7 @@ foreach ($entry in $STUDENTS) {
         $ACTUAL_NAME = Split-Path -Leaf (Resolve-Path $FILE)
         if ($ACTUAL_NAME -eq "$StudentID.md") {
                 Write-Output $OK
+                $s++
         }
         else {
             Write-Output $KO
