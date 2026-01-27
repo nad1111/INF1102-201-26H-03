@@ -12,11 +12,16 @@
 | :heavy_check_mark: | Prêt à être corrigé           |
 | :x:                | Projet inexistant             |
 
-## Configuration
+## :gear: Configuration
 
-| Proxmox Serveur:                                    | User/Pwd         |
+| Proxmox Serveur                                     | User/Pwd         |
 |-----------------------------------------------------|------------------|
 | [10.7.237.28](https://10.7.237.28:8006) | root/Boreal@2️⃣02️⃣6 |
+
+
+| TOFU Credentials                                    | :closed_lock_with_key: Secret |
+|-----------------------------------------------------|------------------|
+| tofu@pve!opentofu                                   | f728d095-1506-490f-81b1-ecdafdfb8ef9   |
 
 
 ## :a: Présence
@@ -31,6 +36,6 @@
 | 5 | [300145940](../300145940/README.md) :point_right: [TasnimMarzouki](https://github.com/TasnimMarzouki) <image src='https://avatars0.githubusercontent.com/u/234069235?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.209 |
 | 6 | [300146418](../300146418/README.md) :point_right: [IkramSidhoum](https://github.com/IkramSidhoum) <image src='https://avatars0.githubusercontent.com/u/198275764?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.210 |
 | 7 | [300146721](../300146721/README.md) :point_right: [smailikh](https://github.com/smailikh) <image src='https://avatars0.githubusercontent.com/u/222739217?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.211 |
-| 8 | [300147629](../300147629/README.md) :point_right: [zoumarbalde-blip](https://github.com/zoumarbalde-blip) <image src='https://avatars0.githubusercontent.com/u/231347782?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.212 |
+| 8 | [300147629](../300147629/README.md) :point_right: [zoumarbalde-blip](https://github.com/zoumarbalde-blip) <image src='https://avatars0.githubusercontent.com/u/231347782?s=460&v=4' width=20 height=20></image> | :heavy_check_mark: | :x: | 10.7.237.212 |
 | 9 | [300147816](../300147816/README.md) :point_right: [HananeZerrouki](https://github.com/HananeZerrouki) <image src='https://avatars0.githubusercontent.com/u/230452383?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.213 |
 | :abacus: | \$\\frac{0}{10}\$ = 0% | \$\displaystyle\sum_{i=1}^{10} s_i\$ = 0 |

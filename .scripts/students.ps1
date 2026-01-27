@@ -102,3 +102,18 @@ $PROXMOX_SERVERS = @(
 $PROXMOX_GROUP_1 = $PROXMOX_SERVERS[0] 
 $PROXMOX_GROUP_2 = $PROXMOX_SERVERS[1] 
 $PROXMOX_GROUP_3 = $PROXMOX_SERVERS[2] 
+
+# --------------------------------------
+pm_token_id     = "tofu@pve!opentofu"
+pm_token_secret = "4fa24fc3-bd8c-4916-ba6e-09a8aecc3b00"
+# --------------------------------------
+
+$TOFU_SECRETS = @(
+"4fa24fc3-bd8c-4916-ba6e-09a8aecc3b00"
+"f728d095-1506-490f-81b1-ecdafdfb8ef9"
+"6ad11b5a-8883-445e-bdf0-5b0a6b8b9b7c"
+)
+
+$TOFU_SECRET_GROUP_1 = $TOFU_SECRETS[0] 
+$TOFU_SECRET_GROUP_2 = $TOFU_SECRETS[1] 
+$TOFU_SECRET_GROUP_3 = $TOFU_SECRETS[2] 

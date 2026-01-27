@@ -12,11 +12,16 @@
 | :heavy_check_mark: | Prêt à être corrigé           |
 | :x:                | Projet inexistant             |
 
-## Configuration
+## :gear: Configuration
 
-| Proxmox Serveur:                                    | User/Pwd         |
+| Proxmox Serveur                                     | User/Pwd         |
 |-----------------------------------------------------|------------------|
 | [10.7.237.16](https://10.7.237.16:8006) | root/Boreal@2️⃣02️⃣6 |
+
+
+| TOFU Credentials                                    | :closed_lock_with_key: Secret |
+|-----------------------------------------------------|------------------|
+| tofu@pve!opentofu                                   | 4fa24fc3-bd8c-4916-ba6e-09a8aecc3b00   |
 
 
 ## :a: Présence
