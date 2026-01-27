@@ -462,7 +462,7 @@ ssh -i ~/.ssh/ma_cle.pk \
   ubuntu@10.7.237.xxx
 ```
 
-# References
+# :books: References
 
 | Cle du prof                     |
 |---------------------------------|
@@ -476,7 +476,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD2pLhMqFGKffSdYvNCMAyM7598oBY+m/3q5AMXmb7I
 
 ---
 
-##  Prereqs on Proxmox (PVE 7)
+##  Prereqs on Proxmox (PVE 7) (Déjâ fait sur le serveur)
 
 ### ✔ Enable API access
 
