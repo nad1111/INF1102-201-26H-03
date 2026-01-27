@@ -255,3 +255,26 @@ L’IaC est un **pilier du DevOps** :
 ## 14. Phrase de conclusion
 
 > **L’Infrastructure as Code transforme l’administration système en une discipline de programmation structurée, reproductible et industrielle.**
+
+# :b: Expérimentation
+
+### 🎛️ Créer un fichier dans ce répertoire `(3.IaC)`:
+
+:checkered_flag: Finalement,
+
+- [ ] Créer un répertoire avec :id: (votre identifiant boreal)
+   - [ ] `mkdir ` :id:
+- [ ] dans votre répertoire ajouter le fichier `README.md`
+  - [ ] `nano `README.md
+- [ ] envoyer vers le serveur `github.com`
+  - [ ] `cd ..`
+  - [ ] `git add `:id: 
+  - [ ] `git commit -m "mon fichier ..."`
+  - [ ] `git push`
+
+- [ ] Se diriger vers le répertoire avec :id: (votre identifiant boreal)
+   - [ ] `cd ` :id:
+
+- [ ] Continuer les 🔄 Exercices 
+
+### 🔄 Exercices
