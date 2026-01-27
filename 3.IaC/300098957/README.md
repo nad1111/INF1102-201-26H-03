@@ -62,10 +62,8 @@ on darwin_arm64
 
 ## 2️⃣ Create project structure
 
-```bash
-mkdir pve-opentofu
-cd pve-opentofu
-```
+`mkdir` :id:
+`cd` :id:
 
 ```bash
 touch provider.tf main.tf variables.tf terraform.tfvars
