@@ -35,14 +35,27 @@ Save:
 
 On your workstation:
 
+- [ ] Windows 🪟
+
 ```bash
-curl -fsSL https://get.opentofu.org/install-opentofu.sh | sh
+choco install opentofu
+```
+
+- [ ] Mac 🍎
+
+```bash
+brew install opentofu
 ```
 
 Verify:
 
 ```bash
 tofu version
+```
+```lua
+OpenTofu v1.11.3
+on darwin_arm64
++ provider registry.opentofu.org/telmate/proxmox v2.9.14
 ```
 
 ---
