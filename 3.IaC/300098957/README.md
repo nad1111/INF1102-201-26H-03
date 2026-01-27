@@ -63,6 +63,7 @@ on darwin_arm64
 ## 2️⃣ Create project structure
 
 `mkdir` :id:
+
 `cd` :id:
 
 ```bash
