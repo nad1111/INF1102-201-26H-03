@@ -21,7 +21,7 @@
 
 ## :a: Présence
 
-|:hash:| Boréal :id:                | README.md    | images | :links: IP |
+|:hash:| Boréal :id:                | README.md    | images | :link: IP |
 |------|----------------------------|--------------|--------|------------|
 | 0 | [300141858](../300141858/README.md) :point_right: [karimcode24](https://github.com/karimcode24) <image src='https://avatars0.githubusercontent.com/u/205304457?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.204 |
 | 1 | [300142072](../300142072/README.md) :point_right: [sigadiarra](https://github.com/sigadiarra) <image src='https://avatars0.githubusercontent.com/u/230452797?s=460&v=4' width=20 height=20></image> | :x: | :x: | 10.7.237.205 |
