@@ -1,5 +1,11 @@
 # 🏗️ Infrastructure as Code (IaC)
 
+|-|-|
+| 🥇 | [:tada: Participation](.scripts/Participation-group1.md) |
+| 🥈 | [:tada: Participation](.scripts/Participation-group2.md) |
+| 🥉 | [:tada: Participation](.scripts/Participation-group3.md) |
+
+
 ## 1. Introduction
 
 Traditionnellement, l’administration des systèmes se faisait **manuellement** :
