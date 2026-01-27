@@ -1,4 +1,4 @@
-# Participation – Groupe 3 – 27-01-2026 19:02
+# Participation – Groupe 3 – 27-01-2026 14:08
 
 | Table des matières            | Description                                             |
 |-------------------------------|---------------------------------------------------------|
@@ -14,9 +14,9 @@
 
 ## Configuration
 
-| Signe              | Signification                 |
-|--------------------|-------------------------------|
-| :heavy_check_mark: | Proxmox Serveur: [10.7.237.33](https://10.7.237.33:8006)   |
+| Signe              | Proxmox Serveur:              | User/Pwd |
+|--------------------|-------------------------------|----------|
+| :heavy_check_mark: | [10.7.237.33](https://10.7.237.33:8006) | root/Boreal@2️⃣02️⃣6 |
 
 
 ## :a: Présence
