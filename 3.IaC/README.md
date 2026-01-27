@@ -462,7 +462,7 @@ ssh -i ~/.ssh/ma_cle.pk \
   ubuntu@10.7.237.xxx
 ```
 
-# References
+# :books: References
 
 | Cle du prof                     |
 |---------------------------------|
@@ -476,7 +476,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD2pLhMqFGKffSdYvNCMAyM7598oBY+m/3q5AMXmb7I
 
 ---
 
-##  Prereqs on Proxmox (PVE 7)
+##  Prereqs on Proxmox (PVE 7) (Déjâ fait sur le serveur)
 
 ### ✔ Enable API access
 
@@ -500,3 +500,28 @@ Save:
 
 ---
 
+### ✔ Create VM Template (cloud-init_template.sh)
+
+```lua
+# Download cloud image
+wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img
+
+# Create VM
+qm create 9000 --name ubuntu-jammy-template --memory 2048 --cores 2 --net0 virtio,bridge=vmbr0
+
+# Import disk
+qm importdisk 9000 jammy-server-cloudimg-amd64.img local-lvm
+
+# Attach disk
+qm set 9000 --scsihw virtio-scsi-pci --scsi0 local-lvm:vm-9000-disk-0
+
+# Cloud-init disk
+qm set 9000 --ide2 local-lvm:cloudinit
+
+# Boot settings
+qm set 9000 --boot c --bootdisk scsi0
+qm set 9000 --serial0 socket --vga serial0
+
+# Convert to template
+qm template 9000
+```
