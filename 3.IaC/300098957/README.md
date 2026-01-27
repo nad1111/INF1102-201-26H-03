@@ -35,8 +35,16 @@ Save:
 
 On your workstation:
 
+- [ ] Windows 🪟
+
 ```bash
-curl -fsSL https://get.opentofu.org/install-opentofu.sh | sh
+choco install opentofu
+```
+
+- [ ] Mac 🍎
+
+```bash
+brew install opentofu
 ```
 
 Verify:
@@ -44,15 +52,19 @@ Verify:
 ```bash
 tofu version
 ```
+```lua
+OpenTofu v1.11.3
+on darwin_arm64
++ provider registry.opentofu.org/telmate/proxmox v2.9.14
+```
 
 ---
 
 ## 2️⃣ Create project structure
 
-```bash
-mkdir pve-opentofu
-cd pve-opentofu
-```
+`mkdir` :id:
+
+`cd` :id:
 
 ```bash
 touch provider.tf main.tf variables.tf terraform.tfvars
@@ -73,7 +85,7 @@ terraform {
 }
 
 provider "proxmox" {
-  pm_api_url      = "https://PVE_IP:8006/api2/json"
+  pm_api_url      = var.pm_url
   pm_api_token_id = var.pm_token_id
   pm_api_token_secret = var.pm_token_secret
   pm_tls_insecure = true
