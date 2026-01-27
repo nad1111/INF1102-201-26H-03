@@ -280,38 +280,11 @@ L’IaC est un **pilier du DevOps** :
 ### 🔄 Exercices
 
 
-Alright, let’s do this cleanly and *practically* 🙂
 OpenTofu works **almost exactly like Terraform**, and Proxmox VE 7 is well-supported via the **Telmate Proxmox provider**.
 
 Below is a **minimal, working, PVE-7-friendly workflow**.
 
----
-
-## 0️⃣ Prereqs on Proxmox (PVE 7)
-
-### ✔ Enable API access
-
-You need either:
-
-* a **user + password**, or
-* **API token** (recommended)
-
-**Recommended (API token):**
-
-```bash
-pveum user add tofu@pve
-pveum aclmod / -user tofu@pve -role Administrator
-pveum user token add tofu@pve opentofu --privsep 0
-```
-
-Save:
-
-* **Token ID**: `tofu@pve!opentofu`
-* **Token Secret**: (shown once)
-
----
-
-## 1️⃣ Install OpenTofu
+#### 1️⃣ Install OpenTofu
 
 On your workstation:
 
@@ -340,7 +313,7 @@ on darwin_arm64
 
 ---
 
-## 2️⃣ Create project structure
+#### 2️⃣ Create project structure
 
 `mkdir` :id:
 
@@ -352,7 +325,7 @@ touch provider.tf main.tf variables.tf terraform.tfvars
 
 ---
 
-## 3️⃣ Provider configuration (`provider.tf`)
+#### 3️⃣ Provider configuration (`provider.tf`)
 
 ```hcl
 terraform {
@@ -374,7 +347,7 @@ provider "proxmox" {
 
 ---
 
-## 4️⃣ VM resource (Cloud-Init VM) (`main.tf`)
+#### 4️⃣ VM resource (Cloud-Init VM) (`main.tf`)
 
 Example **Ubuntu VM** cloned from a template:
 
@@ -416,7 +389,7 @@ resource "proxmox_vm_qemu" "vm1" {
 
 ---
 
-## 5️⃣ Variables (`variables.tf`)
+#### 5️⃣ Variables (`variables.tf`)
 
 ```hcl
 variable "pm_vm_name" {
@@ -447,7 +420,7 @@ variable "pm_token_secret" {
 
 ---
 
-## 6️⃣ Secrets (`terraform.tfvars`)
+#### 6️⃣ Secrets (`terraform.tfvars`)
 
 ```hcl
 pm_token_id     = "tofu@pve!opentofu"
@@ -458,7 +431,7 @@ pm_token_secret = "PASTE_SECRET_HERE"
 
 ---
 
-## 7️⃣ Initialize & apply
+#### 7️⃣ Initialize & apply
 
 ```bash
 tofu init
@@ -472,7 +445,7 @@ Type `yes`.
 
 ---
 
-## 8️⃣ Test VM
+#### 8️⃣ Test VM
 
 ```lua
 ssh -i ~/.ssh/ma_cle.pk \
@@ -492,3 +465,30 @@ ssh -i ~/.ssh/ma_cle.pk \
 ```lua
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD2pLhMqFGKffSdYvNCMAyM7598oBY+m/3q5AMXmb7IE6vq42+yGzqEUzZu9WrFckFD4Hq52rIU5DeOvi83DCF3uroXjNTEtCKdi+tY7cV18bHmsDsBHMqTnpuvroofgFWA0Pi++b2kGW2I5eyy1Qjv5rOp7y11Xe6XeZFEz7qQO1/xNiBMJEruG9Xldgooe4hkaOF39qnbqD4ui3LxYaTUTEulstw4wN70dSB8Zu9YQP7A7KU2zIEwJ1aw8whfO1CAM/AVvoDyqMtV8VXoaZSHOBgluMtinQfyyt473S2ZZeJlnmhK0F1gdOhO4SVZNRMj96m30ryYkYBFWvvLRP5N b300098957@ramena
 ```
+
+---
+
+##  Prereqs on Proxmox (PVE 7)
+
+### ✔ Enable API access
+
+You need either:
+
+* a **user + password**, or
+* **API token** (recommended)
+
+**Recommended (API token):**
+
+```bash
+pveum user add tofu@pve
+pveum aclmod / -user tofu@pve -role Administrator
+pveum user token add tofu@pve opentofu --privsep 0
+```
+
+Save:
+
+* **Token ID**: `tofu@pve!opentofu`
+* **Token Secret**: (shown once)
+
+---
+
