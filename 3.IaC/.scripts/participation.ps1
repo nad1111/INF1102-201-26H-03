@@ -22,16 +22,22 @@ switch ($Group) {
     1 { $ACTIVE_SERVERS = $SERVER_GROUP_1 }
     2 { $ACTIVE_SERVERS = $SERVER_GROUP_2 }
     3 { $ACTIVE_SERVERS = $SERVER_GROUP_3 }
-    default { throw "Groupe invalide" }
+    default { throw "active server Groupe invalide" }
 }
 
 switch ($Group) {
     1 { $PROXMOX_SERVER = $PROXMOX_GROUP_1 }
     2 { $PROXMOX_SERVER = $PROXMOX_GROUP_2 }
     3 { $PROXMOX_SERVER = $PROXMOX_GROUP_3 }
-    default { throw "Groupe invalide" }
+    default { throw "Proxmox server Groupe invalide" }
 }
 
+switch ($Group) {
+    1 { $TOFU_SECRET = $TOFU_SECRET_GROUP_1 }
+    2 { $TOFU_SECRET = $TOFU_SECRET_GROUP_2 }
+    3 { $TOFU_SECRET = $TOFU_SECRET_GROUP_3 }
+    default { throw "Tofu Secret Groupe invalide" }
+}
 
 # Header
 Write-Output "# Participation – Groupe $Group"
@@ -50,11 +56,16 @@ Write-Output "|--------------------|-------------------------------|"
 Write-Output "| :heavy_check_mark: | Prêt à être corrigé           |"
 Write-Output "| :x:                | Projet inexistant             |"
 Write-Output ""
-Write-Output "## Configuration"
+Write-Output "## :gear: Configuration"
 Write-Output ""
-Write-Output "| Proxmox Serveur:                                    | User/Pwd         |"
+Write-Output "| Proxmox Serveur                                     | User/Pwd         |"
 Write-Output "|-----------------------------------------------------|------------------|"
 Write-Output "| [${PROXMOX_SERVER}](https://${PROXMOX_SERVER}:8006) | root/Boreal@2️⃣02️⃣6 |"
+Write-Output ""
+Write-Output ""
+Write-Output "| TOFU Credentials                                    | :closed_lock_with_key: Secret |"
+Write-Output "|-----------------------------------------------------|------------------|"
+Write-Output "| tofu@pve!opentofu                                   | ${TOFU_SECRET}   |"
 Write-Output ""
 Write-Output ""
 Write-Output "## :a: Présence"
