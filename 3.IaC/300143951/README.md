@@ -336,6 +336,10 @@ La VM a été créée avec succès sur le serveur Proxmox :
 
 # <p align="center"><img src="images//machine cree.png" alt="Images" width="450"/></p>
 
+La vm est accessible et fontionne
+
+# <p align="center"><img src="images//fonctionnelle.png" alt="Images" width="450"/></p>
+
 **Informations visibles dans l'interface Proxmox :**
 - **ID VM :** 101
 - **Nom :** vm300143951
