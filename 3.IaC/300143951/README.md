@@ -193,7 +193,7 @@ resource "proxmox_vm_qemu" "vm1" {
 
   ciuser  = "ubuntu"
   sshkeys = <<EOF
-${file("C:/Users/franc/.ssh/ma_cle.pub")}
+${file("C:/Users/franc/.ssh/id_ed25519.pub")}
 ${file("C:/Users/franc/.ssh/cle_publique_du_prof.pub")}
 EOF
 }
@@ -241,7 +241,7 @@ Après confirmation (`yes`), OpenTofu crée la VM sur le serveur Proxmox.
 Une fois la VM déployée, connexion via SSH :
 
 ```bash
-ssh -i ~/.ssh/ma_cle ubuntu@10.7.237.206
+ssh -i ~/.ssh/id_ed25519 ubuntu@10.7.237.206
 ```
 
 ---
@@ -285,14 +285,14 @@ ni provider.tf, main.tf, variables.tf, terraform.tfvars
 ### 6.3 Chemin SSH invalide
 
 **Problème :**  
-L'erreur `no file exists at ~/.ssh/ma_cle.pub` apparaissait lors de `tofu plan`. Le tilde (`~`) n'est pas reconnu par OpenTofu sur Windows.
+L'erreur `no file exists at ~/.ssh/id_ed25519.pub` apparaissait lors de `tofu plan`. Le tilde (`~`) n'est pas reconnu par OpenTofu sur Windows.
 
 **Solution :**  
 Modification de `main.tf` pour utiliser le chemin absolu Windows avec des slashes (`/`) :
 
 ```hcl
 sshkeys = <<EOF
-${file("C:/Users/franc/.ssh/ma_cle.pub")}
+${file("C:/Users/franc/.ssh/id_ed25519.pub")}
 ${file("C:/Users/franc/.ssh/cle_publique_du_prof.pub")}
 EOF
 ```
@@ -318,25 +318,54 @@ Correction du nom du template dans `main.tf` en fonction du résultat obtenu (ex
 
 ---
 
-### 6.5 Clé privée au lieu de clé publique
+## 7. Résultat final
 
-**Problème :**  
-L'output de `tofu plan` montrait `-----BEGIN OPENSSH PRIVATE KEY-----` au lieu de la clé publique. Le fichier `ma_cle.pub` contenait la clé privée par erreur.
+### 7.1 Déploiement réussi
 
-**Solution :**  
-Vérification que `ma_cle.pub` contient bien une clé publique (commençant par `ssh-rsa`) et non une clé privée. 
+Après correction de tous les problèmes, le déploiement s'est terminé avec succès :
 
-Génération correcte de la paire de clés :
+```
+proxmox_vm_qemu.vm1: Creation complete after 10m57s [id=labinfo/qemu/101]
 
-```bash
-ssh-keygen -t rsa -b 4096 -f C:\Users\franc\.ssh\ma_cle
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 ```
 
-Le fichier `.pub` doit contenir une ligne commençant par `ssh-rsa`, tandis que le fichier sans extension contient la clé privée.
+### 7.2 Vérification dans Proxmox
+
+La VM a été créée avec succès sur le serveur Proxmox :
+
+![VM créée avec succès dans Proxmox](images/machine_cree.png)
+
+**Informations visibles dans l'interface Proxmox :**
+- **ID VM :** 101
+- **Nom :** vm300143951
+- **Statut :** En cours d'exécution (running)
+- **Uptime :** 00:00:43
+- **Mémoire :** 15.6% utilisée (2 GB alloués)
+- **CPU :** 32.7% de 2 cores
+- **Disque :** 0.0% utilisé
+
+### 7.3 Fichiers du projet
+
+Structure finale du projet :
+
+```
+300143951/
+├── .terraform/          # Fichiers d'état OpenTofu
+├── images/
+│   ├── .gitkeep
+│   └── machine_cree.png # Capture d'écran du succès
+├── provider.tf          # Configuration du provider Proxmox
+├── main.tf              # Définition de la ressource VM
+├── variables.tf         # Déclaration des variables
+├── terraform.tfvars     # Valeurs des variables (non committé)
+├── terraform.tfstate    # État actuel de l'infrastructure
+└── README.md            # Ce document
+```
 
 ---
 
-## 7. Conclusion
+## 8. Conclusion
 
 Ce laboratoire a permis de comprendre et d'appliquer les principes de l'Infrastructure as Code en utilisant OpenTofu pour déployer automatiquement une machine virtuelle sur Proxmox. 
 
