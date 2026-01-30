@@ -540,3 +540,7 @@ qm set 9000 --serial0 socket --vga serial0
 # Convert to template
 qm template 9000
 ```
+
+## 🏗️ Installation
+
+- [ ] [💻 Proxmox VE Installation – HP ProLiant DL360 G6](https://github.com/CollegeBoreal/Laboratoires/tree/main/D.DC/S.Servers/Proliant/Proxmox)
