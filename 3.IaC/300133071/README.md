@@ -59,7 +59,7 @@ Ce travail permet de :
 └── README.md
 ```
 
-## contenue de terraform.tfvars
+## contenu de terraform.tfvars
 
 ```text
 pm_vm_name      = "vm300133071"
@@ -109,7 +109,6 @@ http://10.7.237.194:80
 
 # ✅ Résultats obtenus
 
-```text
 VM Ubuntu déployée automatiquement
 
 Infrastructure reproductible
@@ -119,4 +118,3 @@ Aucune configuration manuelle sur Proxmox
 Déploiement rapide et fiable
 
 Infrastructure entièrement décrite par du code
-```
