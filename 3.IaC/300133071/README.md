@@ -86,7 +86,7 @@ tofu apply
 via 
 <a href="https://10.7.237.16:8006/#v1:0:18:4:::::::" target="_blank" rel="noopener noreferrer">Serveur Promox</a>
 
-##🔍 Vérification
+## 🔍 Vérification
 
 Connexion à la VM via SSH :
 
