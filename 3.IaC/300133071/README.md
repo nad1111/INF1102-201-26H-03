@@ -82,6 +82,10 @@ tofu apply
 
 ```
 
+<img src="images/1.png" alt="Connexion Promox" width="600" /> 
+via 
+<a href="https://10.7.237.16:8006/#v1:0:18:4:::::::" target="_blank" rel="noopener noreferrer">Serveur Promox</a>
+
 ##🔍 Vérification
 
 Connexion à la VM via SSH :
@@ -100,6 +104,8 @@ ssh -i ~/.ssh/williamkey.pk `
 Depuis un navigateur, saisir l’adresse IP de la VM :
 
 http://10.7.237.194:80
+
+<img src="images/2.png" alt="Deploiement du serveur web" width="600" />
 
 # ✅ Résultats obtenus
 
