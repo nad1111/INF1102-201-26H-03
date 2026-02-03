@@ -1,5 +1,7 @@
 
 
+* terraform.tfvars
+
 ```lua
 pm_vm_name      = "vm300098957"   
 pm_ipconfig0    = "ip=10.7.237.223/23,gw=10.7.237.1"
@@ -12,3 +14,4 @@ sshkeys = [
   file("~/.ssh/b300098957@ramena.pub")
 ]
 ```
+
