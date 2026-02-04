@@ -49,7 +49,8 @@ Cette étape transforme le code en infrastructure réelle.
 ```powershell
 Verification de mon VM sur proxmox
 ```
-<img width="1906" height="655" alt="image" src="https://github.com/user-attachments/assets/c69e23e4-6e47-41a7-9761-eff47b8d25fb" />
+<img width="947" height="282" alt="image" src="https://github.com/user-attachments/assets/b421b7fd-8201-4966-81f0-2d0c8fa8fd8c" />
+
 
 #verification d'acces a mon serveur via ssh avec:
 ```powershell
@@ -87,6 +88,7 @@ Verification finale de la page web nginx mon ip et le port 80 : 10.7.237.200:80
 <img width="707" height="224" alt="image" src="https://github.com/user-attachments/assets/f55495fe-e0fe-4d3c-87e5-1b7e448f1a42" />
 
 Cela montre que le travail demande est effectue avec succes
+
 
 
 
