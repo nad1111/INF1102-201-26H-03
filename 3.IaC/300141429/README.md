@@ -81,10 +81,13 @@ systemctl start nginx
 ```
 systemctl start nginx démarre le service NGINX pour lancer le serveur web sur la machine.
 
-#Verification finale de la page web nginx mon ip et le port 80 : 10.7.237.200:80
+```powershell
+Verification finale de la page web nginx mon ip et le port 80 : 10.7.237.200:80
+```
 <img width="707" height="224" alt="image" src="https://github.com/user-attachments/assets/f55495fe-e0fe-4d3c-87e5-1b7e448f1a42" />
 
 Cela montre que le travail demande est effectue avec succes
+
 
 
 
