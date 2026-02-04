@@ -5,7 +5,7 @@ resource "proxmox_vm_qemu" "vm1" {
 
   cores   = 2
   sockets = 1
-  memory  = 2048
+  memory  = 2096
 
   scsihw = "virtio-scsi-pci"
 
@@ -24,10 +24,11 @@ resource "proxmox_vm_qemu" "vm1" {
   ipconfig0  = var.pm_ipconfig0
   nameserver = var.pm_nameserver
 
-  ciuser  = "ubuntu"
+  ciuser = "ubuntu"
+
   sshkeys = <<EOF
-${file("~/.ssh/ma_cle.pub")}
-${file("~/.ssh/cle_publique_du_prof.pub")}
+${file(pathexpand("~/.ssh/ma_cle.pub"))}
+${file(pathexpand("~/.ssh/cle_publique_du_prof.pub"))}
 EOF
 }
 
