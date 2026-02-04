@@ -13,8 +13,6 @@ Cela prouve que l’environnement IaC est prêt.
 
 
 
-
-📸 Capture 2 — tofu init
 tofu init
 Rôle :
 Initialise le projet IaC :
@@ -22,21 +20,27 @@ Initialise le projet IaC :
 télécharge le provider telmate/proxmox
 
 prépare le dossier pour communiquer avec l’API Proxmox
-
 Sans cette étape, OpenTofu ne peut pas fonctionner.
 
-📸 Capture 3 — tofu plan
+<img width="601" height="238" alt="image" src="https://github.com/user-attachments/assets/186d514e-a825-4193-9cf1-5342bd11e201" />
+
+
+
 tofu plan
 Rôle :
 Affiche ce que OpenTofu va créer sans encore l’exécuter.
 On voit que la ressource proxmox_vm_qemu.vm1 sera créée.
 Cela permet de valider que le code est correct avant le déploiement.
+<img width="826" height="455" alt="image" src="https://github.com/user-attachments/assets/49f7ddaf-b8d2-4839-b838-cc2072c917e1" />
+
 
 📸 Capture 4 — tofu apply
 tofu apply
 Rôle :
 Déploie réellement la machine virtuelle sur Proxmox via l’API.
 Cette étape transforme le code en infrastructure réelle.
+<img width="827" height="459" alt="image" src="https://github.com/user-attachments/assets/9ae4584d-6763-4a2a-927b-e9ec773ddff3" />
+
 
 📸 Capture 5 — VM visible dans l’interface Proxmox
 Rôle :
@@ -71,5 +75,6 @@ Preuve que la configuration vient du code IaC.
 
 📸 Capture 10 — Clés SSH injectées
 cat ~/.ssh/authorized_keys
+
 
 
