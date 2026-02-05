@@ -1,4 +1,6 @@
+# =========================
 # Terraform / OpenTofu
+# =========================
 .terraform/
 .terraform.lock.hcl
 terraform.tfstate
@@ -6,12 +8,31 @@ terraform.tfstate.backup
 *.tfstate
 *.tfstate.*
 
+# Crash logs
+crash.log
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# CLI configuration files
+.terraformrc
+terraform.rc
+
+# =========================
 # Variables sensibles
+# =========================
 terraform.tfvars
 *.tfvars
 
-# SSH keys
+# =========================
+# SSH keys (sécurité)
+# =========================
 *.pem
 *.key
 *.pub
 
+# =========================
+# Proxmox / Cloud-init
