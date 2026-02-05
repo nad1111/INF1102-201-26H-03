@@ -1,6 +1,57 @@
 # 🐦‍⬛ [QEMU](https://www.qemu.org) (Quick EMUlator)
 
+QEMU, c’est **un émulateur et virtualiseur open-source**. Dit simplement : il permet de faire tourner **un système d’exploitation dans un autre**, comme une machine virtuelle.
 
+Un peu plus clair 👇
+
+## 🧠 QEMU, à quoi ça sert ?
+
+QEMU peut :
+
+* **Émuler** du matériel (CPU, carte réseau, disque, etc.)
+* **Virtualiser** des machines complètes quand il est combiné avec **KVM** (sur Linux)
+
+Avec QEMU, tu peux par exemple :
+
+* Lancer **Linux sur Windows ou macOS**
+* Tester un OS sans toucher à ta machine
+* Simuler une autre architecture CPU (ARM, PowerPC, RISC-V…)
+
+---
+
+### ⚙️ Émulation vs Virtualisation
+
+C’est la distinction clé :
+
+* **Émulation (QEMU seul)**
+  👉 Peut imiter *n’importe quel processeur*
+  ❌ Lent (tout est traduit en logiciel)
+
+* **Virtualisation (QEMU + KVM)**
+  👉 Utilise le CPU réel
+  ✅ Très rapide (quasi natif)
+  ❌ Nécessite un CPU compatible + Linux
+
+> Dans Proxmox, quand tu vois `qemu-system-x86_64`, c’est QEMU **avec KVM activé**.
+
+---
+
+### 🧩 QEMU dans l’écosystème
+
+* **Proxmox** → utilise QEMU/KVM pour les VM
+* **libvirt / virt-manager** → pilotent QEMU
+* **Docker / Podman** → pas QEMU (conteneurs ≠ VM)
+* **UTM / Lima / Colima (macOS)** → basés sur QEMU
+
+---
+
+### 🧪 En une phrase
+
+> **QEMU est le moteur qui fait tourner les machines virtuelles**, et avec KVM, il devient aussi rapide qu’un hyperviseur « pro ».
+
+Si tu veux, je peux te l’expliquer **dans le contexte précis de Proxmox**, ou te faire un **schéma VM vs conteneur** pour tes étudiants 👀
+
+## ⚙️ Manipulation 
 
 ### 🔹 Gestion générale des VM
 
