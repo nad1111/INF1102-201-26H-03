@@ -155,6 +155,25 @@ systemctl restart pve-cluster
 ```bash
 systemctl list-units --type=service | grep pve
 ```
+<details>
+
+```lua
+  pve-cluster.service                loaded active running The Proxmox VE cluster filesystem
+  pve-firewall.service               loaded active running Proxmox VE firewall
+  pve-guests.service                 loaded active exited  PVE guests
+  pve-ha-crm.service                 loaded active running PVE Cluster HA Resource Manager Daemon
+  pve-ha-lrm.service                 loaded active running PVE Local HA Resource Manager Daemon
+  pve-lxc-syscalld.service           loaded active running Proxmox VE LXC Syscall Daemon
+  pvebanner.service                  loaded active exited  Proxmox VE Login Banner
+  pvedaemon.service                  loaded active running PVE API Daemon
+  pvefw-logger.service               loaded active running Proxmox VE firewall logger
+  pvenetcommit.service               loaded active exited  Commit Proxmox VE network changes
+  pveproxy.service                   loaded active running PVE API Proxy Server
+  pvescheduler.service               loaded active running Proxmox VE scheduler
+  pvestatd.service                   loaded active running PVE Status Daemon
+```
+  
+</details>
 
 Ou plus ciblé :
 
@@ -168,12 +187,3 @@ systemctl status pveproxy pvedaemon pve-cluster
 
 > *Proxmox VE est une plateforme de virtualisation basée sur Debian qui repose sur plusieurs services systemd, notamment pve-cluster, pvedaemon et pveproxy, permettant la gestion des machines virtuelles, des conteneurs et du clustering.*
 
----
-
-Si tu veux, je peux :
-
-* 🧪 te faire **un schéma mental / résumé 1 page**
-* 🔧 t’aider à **dépanner un service Proxmox qui refuse de démarrer**
-* 🎓 te préparer **des questions-réponses type examen**
-
-Dis-moi 👌
