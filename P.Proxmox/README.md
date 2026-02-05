@@ -180,6 +180,77 @@ Ou plus ciblé :
 ```bash
 systemctl status pveproxy pvedaemon pve-cluster
 ```
+<details>
+
+```lua
+● pveproxy.service - PVE API Proxy Server
+     Loaded: loaded (/lib/systemd/system/pveproxy.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2026-02-04 23:55:51 EST; 18h ago
+    Process: 1572964 ExecStartPre=/usr/bin/pvecm updatecerts --silent (code=exited, status=0/SUCCESS)
+    Process: 1572966 ExecStart=/usr/bin/pveproxy start (code=exited, status=0/SUCCESS)
+    Process: 1573652 ExecReload=/usr/bin/pveproxy restart (code=exited, status=0/SUCCESS)
+   Main PID: 1572967 (pveproxy)
+      Tasks: 4 (limit: 77175)
+     Memory: 224.6M
+        CPU: 3min 14.648s
+     CGroup: /system.slice/pveproxy.service
+             ├─1572967 pveproxy
+             ├─1718755 pveproxy worker
+             ├─1730495 pveproxy worker
+             └─1734182 pveproxy worker
+
+Feb 05 14:15:36 labinfo pveproxy[1572967]: starting 1 worker(s)
+Feb 05 14:15:36 labinfo pveproxy[1572967]: worker 1718755 started
+Feb 05 15:19:45 labinfo pveproxy[1715532]: worker exit
+Feb 05 15:19:45 labinfo pveproxy[1572967]: worker 1715532 finished
+Feb 05 15:19:45 labinfo pveproxy[1572967]: starting 1 worker(s)
+Feb 05 15:19:45 labinfo pveproxy[1572967]: worker 1730495 started
+Feb 05 15:41:03 labinfo pveproxy[1718592]: worker exit
+Feb 05 15:41:03 labinfo pveproxy[1572967]: worker 1718592 finished
+Feb 05 15:41:03 labinfo pveproxy[1572967]: starting 1 worker(s)
+Feb 05 15:41:03 labinfo pveproxy[1572967]: worker 1734182 started
+
+● pvedaemon.service - PVE API Daemon
+     Loaded: loaded (/lib/systemd/system/pvedaemon.service; enabled; vendor preset: enabled)
+     Active: active (running) since Wed 2026-02-04 23:55:49 EST; 18h ago
+    Process: 1572958 ExecStart=/usr/bin/pvedaemon start (code=exited, status=0/SUCCESS)
+   Main PID: 1572960 (pvedaemon)
+      Tasks: 4 (limit: 77175)
+     Memory: 224.2M
+        CPU: 5min 24.741s
+     CGroup: /system.slice/pvedaemon.service
+             ├─1572960 pvedaemon
+             ├─1657260 pvedaemon worker
+             ├─1658835 pvedaemon worker
+             └─1718468 pvedaemon worker
+
+Feb 05 14:39:50 labinfo pvedaemon[1657260]: <tofu@pve!opentofu> starting task UPID:labinfo:001A4C86:049F7F20:6984F206:qmshutdown:100:tofu@pve!opentofu:
+Feb 05 14:39:56 labinfo pvedaemon[1657260]: <tofu@pve!opentofu> end task UPID:labinfo:001A4C86:049F7F20:6984F206:qmshutdown:100:tofu@pve!opentofu: OK
+Feb 05 14:39:56 labinfo pvedaemon[1723581]: start VM 100: UPID:labinfo:001A4CBD:049F8181:6984F20C:qmstart:100:tofu@pve!opentofu:
+Feb 05 14:39:56 labinfo pvedaemon[1718468]: <tofu@pve!opentofu> starting task UPID:labinfo:001A4CBD:049F8181:6984F20C:qmstart:100:tofu@pve!opentofu:
+Feb 05 14:39:57 labinfo pvedaemon[1718468]: <tofu@pve!opentofu> end task UPID:labinfo:001A4CBD:049F8181:6984F20C:qmstart:100:tofu@pve!opentofu: OK
+Feb 05 14:56:13 labinfo pvedaemon[1658835]: <root@pam> successful auth for user 'root@pam'
+Feb 05 15:08:39 labinfo pvedaemon[1718468]: <root@pam> successful auth for user 'root@pam'
+Feb 05 15:11:13 labinfo pvedaemon[1718468]: <root@pam> successful auth for user 'root@pam'
+Feb 05 15:26:14 labinfo pvedaemon[1657260]: <root@pam> successful auth for user 'root@pam'
+Feb 05 15:41:15 labinfo pvedaemon[1657260]: <root@pam> successful auth for user 'root@pam'
+
+● pve-cluster.service - The Proxmox VE cluster filesystem
+     Loaded: loaded (/lib/systemd/system/pve-cluster.service; enabled; vendor preset: enabled)
+     Active: active (running) since Tue 2026-01-27 15:13:06 EST; 1 weeks 2 days ago
+    Process: 978 ExecStart=/usr/bin/pmxcfs (code=exited, status=0/SUCCESS)
+   Main PID: 1016 (pmxcfs)
+      Tasks: 9 (limit: 77175)
+     Memory: 66.5M
+        CPU: 7min 19.075s
+     CGroup: /system.slice/pve-cluster.service
+             └─1016 /usr/bin/pmxcfs
+
+Jan 27 15:13:05 labinfo systemd[1]: Starting The Proxmox VE cluster filesystem...
+Jan 27 15:13:06 labinfo systemd[1]: Started The Proxmox VE cluster filesystem.
+```
+  
+</details>
 
 ---
 
