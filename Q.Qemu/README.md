@@ -36,6 +36,56 @@ C’est la distinction clé :
 
 ---
 
+### 🧱 Type d’hyperviseur
+
+* **QEMU + KVM = hyperviseur de type 1 (bare-metal)** ✅
+* **QEMU seul = pas vraiment un hyperviseur** (émulation pure) ❌
+
+---
+
+### 🔍 Pourquoi QEMU + KVM est un hyperviseur ?
+
+Quand QEMU utilise **KVM (Kernel-based Virtual Machine)** :
+
+* Le **noyau Linux** devient l’hyperviseur
+* QEMU fournit le **matériel virtuel** (CPU, disque, réseau, BIOS/UEFI…)
+* Les VM s’exécutent **directement sur le CPU** (Intel VT-x / AMD-V)
+
+👉 C’est exactement ce que fait **Proxmox VE**.
+
+---
+
+### 📊 Comparaison rapide
+
+| Solution             | Type               | Rôle                      |
+| -------------------- | ------------------ | ------------------------- |
+| **QEMU seul**        | Émulateur          | Simule le matériel (lent) |
+| **KVM (dans Linux)** | Hyperviseur type 1 | Exécute les VM            |
+| **QEMU + KVM**       | Hyperviseur type 1 | Stack complet             |
+| VMware ESXi          | Type 1             | Bare-metal                |
+| VirtualBox           | Type 2             | Sur OS hôte               |
+
+---
+
+### 🧠 Dans Proxmox (important)
+
+Quand tu crées une VM :
+
+* Proxmox appelle `qemu-system-*`
+* KVM est activé (`-enable-kvm`)
+* Le noyau Linux **planifie les vCPU**
+* QEMU gère les périphériques virtuels
+
+👉 Tu **n’installes pas QEMU dans la VM** : c’est l’hôte qui l’utilise.
+
+---
+
+### 🧩 Phrase clé à retenir
+
+> **QEMU n’est un hyperviseur que lorsqu’il est combiné à KVM ; seul, c’est un émulateur.**
+
+---
+
 ### 🧩 QEMU dans l’écosystème
 
 * **Proxmox** → utilise QEMU/KVM pour les VM
