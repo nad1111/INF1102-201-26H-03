@@ -1,1 +1,17 @@
+# Terraform / OpenTofu
+.terraform/
+.terraform.lock.hcl
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Variables sensibles
+terraform.tfvars
+*.tfvars
+
+# SSH keys
+*.pem
+*.key
+*.pub
 
