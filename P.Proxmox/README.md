@@ -258,3 +258,92 @@ Jan 27 15:13:06 labinfo systemd[1]: Started The Proxmox VE cluster filesystem.
 
 > *Proxmox VE est une plateforme de virtualisation basée sur Debian qui repose sur plusieurs services systemd, notamment pve-cluster, pvedaemon et pveproxy, permettant la gestion des machines virtuelles, des conteneurs et du clustering.*
 
+---
+
+## 🈷️ Problème de connection root UI
+
+Tu as un problème pour te connecter à l’interface web de Proxmox en tant que **root**. La commande que tu montres :
+
+```bash
+systemctl restart pveproxy pvedaemon
+```
+
+**fait partie de la procédure**, mais voyons un peu plus en détail pour corriger ton problème de connexion root UI.
+
+---
+
+### Étapes de diagnostic et correction
+
+1. **Vérifier que les services essentiels tournent :**
+
+```bash
+systemctl status pveproxy
+systemctl status pvedaemon
+systemctl status pve-cluster
+systemctl status corosync   # si cluster
+```
+
+* `pveproxy` → sert l’interface web.
+* `pvedaemon` → gère les tâches et l’authentification.
+* `pve-cluster` → stocke la configuration.
+* `corosync` → uniquement si tu as un cluster.
+
+Si l’un est **inactive** ou **failed**, tu peux le redémarrer :
+
+```bash
+systemctl restart pveproxy pvedaemon pve-cluster
+```
+
+---
+
+2. **Vérifier la connexion root**
+
+* Assure-toi que tu utilises **root@pam** ou **root@pve** correctement dans l’UI.
+* Exemple :
+
+  * **Utilisateur :** `root@pam`
+  * **Mot de passe :** celui défini avec `passwd root`
+
+Si tu veux **changer le mot de passe root** :
+
+```bash
+passwd root
+```
+
+⚠️ Si tu as essayé `pveum passwd root@pve` et que ça ne fonctionne pas, utilise plutôt :
+
+```bash
+pveum user list   # pour lister les users
+pveum passwd root@pam
+```
+
+---
+
+3. **Vérifier le certificat SSL (si nécessaire)**
+
+Si l’UI te refuse la connexion, parfois c’est dû au certificat auto-signé :
+
+```bash
+ls -l /etc/pve/local/pve-ssl.*
+```
+
+Tu peux régénérer le certificat :
+
+```bash
+pvecm updatecerts
+systemctl restart pveproxy
+```
+
+---
+
+4. **Vérifier les logs**
+
+Si après tout ça ça ne marche toujours pas :
+
+```bash
+journalctl -u pveproxy -f
+journalctl -u pvedaemon -f
+```
+
+Ça te donnera la raison exacte de l’échec (mot de passe, permission, SSL, etc.).
+
