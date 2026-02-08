@@ -60,6 +60,37 @@ tofu apply
 
 <img width="1908" height="1077" alt="t" src="https://github.com/user-attachments/assets/02486dc5-96cd-4f17-9029-9b016b0b280f" />
 
+## 🔍 Vérification
+
+Connexion à la VM via SSH :
+
+```powershell
+
+ssh -i ~/.ssh/taylor.pk `
+  -o StrictHostKeyChecking=no `
+  -o UserKnownHostsFile=/tmp/ssh_known_hosts_empty `
+  ubuntu@10.7.237.196
+
+```
+ou
+```powershell
+ssh -i C:\Users\Utilisateur\.ssh\taylor.pk ubuntu@10.7.237.196
+
+```
+
+## Accès web
+
+Depuis un navigateur, saisir l’adresse IP de la VM étant dans le reseau:
+
+http://10.7.237.196
+
+<img width="1568" height="639" alt="Capture d’écran 2026-02-03 184650" src="https://github.com/user-attachments/assets/1d729d3a-f722-4dbe-8071-e1af54f3cad5" />
+
+
+## site web personnalisé
+
+<img width="1919" height="801" alt="Capture d’écran 2026-02-03 190219" src="https://github.com/user-attachments/assets/810f0b45-e86e-49e8-9daa-3f0be9223022" />
+
 
 
 
