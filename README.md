@@ -1,4 +1,4 @@
-# INF1102-201-26H-03 (Mardi ✅ )
+# INF1102-201-26H-03 (Mardi ✅ 4:30pm S208)
 
 INF1102 (201) - Programmation de systèmes
 
