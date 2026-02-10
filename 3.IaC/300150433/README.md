@@ -42,8 +42,11 @@ Ce travail permet de :
 ├── provider.tf
 ├── main.tf
 ├── variables.tf
-├── terraform.tfvars   (non versionné, secrets)
-└── README.md
+├── terraform.tfvars   
+├── README.md
+└── images/
+    └── .gitkeep
+
 
 ````
 
@@ -134,7 +137,7 @@ variable "pm_token_secret" {
 }
 ```
 
-#### 4️⃣ `terraform.tfvars` (**ne pas versionner**)
+#### 4️⃣ `terraform.tfvars` 
 
 ```hcl
 pm_vm_name      = "vm300150433"
