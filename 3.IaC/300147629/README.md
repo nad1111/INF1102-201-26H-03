@@ -11,7 +11,9 @@ tofu version
 (base) PS C:\Users\zouma> tofu version
 OpenTofu v1.11.4
 on windows_amd64
-  ```
+
+```
+</details>
 #Terraform.tfvars
 ``` lua
 pm_vm_name      = "vm300147629"
@@ -25,7 +27,7 @@ sshkeys = [
   file("~/.ssh/cle_publique_du_prof.pub")
 ```
 
-</details>
+
  Voir si OpenTofu  est installer sur Vm
  
 ```powershell
