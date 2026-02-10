@@ -104,8 +104,8 @@ $PROXMOX_GROUP_2 = $PROXMOX_SERVERS[1]
 $PROXMOX_GROUP_3 = $PROXMOX_SERVERS[2] 
 
 # --------------------------------------
-pm_token_id     = "tofu@pve!opentofu"
-pm_token_secret = "4fa24fc3-bd8c-4916-ba6e-09a8aecc3b00"
+# pm_token_id     = "tofu@pve!opentofu"
+# pm_token_secret = "4fa24fc3-bd8c-4916-ba6e-09a8aecc3b00"
 # 2 = "f728d095-1506-490f-81b1-ecdafdfb8ef9"
 # --------------------------------------
 
