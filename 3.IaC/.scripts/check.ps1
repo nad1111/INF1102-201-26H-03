@@ -85,7 +85,7 @@ $i = 0
 $s = 0
 
 # Récupérer la liste des VMs via SSH sur le serveur du groupe
-$VM_LIST = ssh -i ~/.ssh/b300098957@ramena root@${PROXMOX_SERVER} 'qm list | awk "NR>1 {print \$2 \" \" \$3}"'
+$VM_LIST = ssh -i ~/.ssh/${PK_PROF} root@${PROXMOX_SERVER} 'qm list | awk "NR>1 {print \$2 \" \" \$3}"'
 
 # Construire un hashtable pour VM -> état
 $VM_STATUS = @{}
