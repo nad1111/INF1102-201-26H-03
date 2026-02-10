@@ -118,7 +118,7 @@ for ($g = 0; $g -lt $ACTIVE_GROUP.Count; $g++) {
 
     # Vérification VM
     if ($VM_STATUS.ContainsKey($StudentID)) {
-        $VM = if ($VM_STATUS[$StudentID] -eq "running") { ":green_circle:" } else { ":orange_circle:" }
+        $VM = if ($VM_STATUS[$StudentID] -eq "running") { ":green_circle: [${ServerID}](http://${ServerID})" } else { ":orange_circle:" }
     } else {
         $VM = ":x:"
     }
