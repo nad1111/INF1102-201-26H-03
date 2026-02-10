@@ -488,3 +488,62 @@ lvs -o+data_percent,metadata_percent
 
 ---
 
+### **1️⃣ `qm` – Gestion des machines virtuelles QEMU/KVM**
+
+Utilisé pour la virtualisation complète (KVM/QEMU).
+
+| Commande                                | Utilité                                       |
+| --------------------------------------- | --------------------------------------------- |
+| `qm list`                               | Lister toutes les VMs QEMU sur l’hôte Proxmox |
+| `qm start <vmid>`                       | Démarrer une VM                               |
+| `qm stop <vmid>`                        | Arrêter une VM proprement                     |
+| `qm shutdown <vmid>`                    | Envoyer un ACPI shutdown (arrêt logiciel)     |
+| `qm reset <vmid>`                       | Redémarrer une VM (comme un power cycle)      |
+| `qm destroy <vmid>`                     | Supprimer entièrement une VM                  |
+| `qm create <vmid> [options]`            | Créer une nouvelle VM                         |
+| `qm set <vmid> [options]`               | Modifier la configuration d’une VM            |
+| `qm config <vmid>`                      | Afficher le fichier de configuration d’une VM |
+| `qm importdisk <vmid> <disk> <storage>` | Importer un disque dans une VM                |
+| `qm resize <vmid> <disk> +<taille>`     | Redimensionner un disque de VM                |
+| `qm monitor <vmid>`                     | Ouvrir le monitor QEMU pour debug             |
+| `qm terminal <vmid>`                    | Accéder à la console de la VM via le shell    |
+
+---
+
+### **2️⃣ `pct` – Gestion des conteneurs LXC**
+
+Utilisé pour les conteneurs Linux légers.
+
+| Commande                      | Utilité                                      |
+| ----------------------------- | -------------------------------------------- |
+| `pct list`                    | Lister tous les conteneurs                   |
+| `pct start <ctid>`            | Démarrer un conteneur                        |
+| `pct stop <ctid>`             | Arrêter un conteneur                         |
+| `pct shutdown <ctid>`         | Arrêter proprement un conteneur              |
+| `pct create <ctid> [options]` | Créer un nouveau conteneur                   |
+| `pct destroy <ctid>`          | Supprimer un conteneur                       |
+| `pct enter <ctid>`            | Entrer dans le shell du conteneur            |
+| `pct config <ctid>`           | Afficher la configuration du conteneur       |
+| `pct mount <ctid>`            | Monter le système de fichiers du conteneur   |
+| `pct unmount <ctid>`          | Démonter le système de fichiers du conteneur |
+
+---
+
+### **3️⃣ `pvesh` – CLI de l’API REST Proxmox**
+
+Permet des tâches avancées et l’automatisation via l’API de Proxmox.
+
+| Commande                                          | Utilité                          |
+| ------------------------------------------------- | -------------------------------- |
+| `pvesh get /nodes`                                | Lister tous les nœuds du cluster |
+| `pvesh get /nodes/<node>/qemu`                    | Lister les VMs d’un nœud         |
+| `pvesh get /nodes/<node>/lxc`                     | Lister les conteneurs d’un nœud  |
+| `pvesh create /nodes/<node>/qemu/<vmid>/snapshot` | Créer un snapshot d’une VM       |
+| `pvesh delete /nodes/<node>/qemu/<vmid>`          | Supprimer une VM via l’API       |
+
+---
+
+### ⚠️ Points importants
+
+* Ces commandes **existent uniquement sur un hôte Proxmox VE**, généralement basé sur Debian.
+* Elles **gèrent QEMU/KVM et LXC**, mais avec des fonctions spécifiques Proxmox (stockage, snapshots, cluster).
